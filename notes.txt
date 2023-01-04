@@ -1,0 +1,104 @@
+Genetic Algorithm Explained:
+
+Genetic Algorithms is an optimization algorithm that is used on complex problems, but not any type of problems.
+
+Problems can be divided ( from many prespectives ) into many categorizes, one of them is:
+
+1- Problems with no solution
+2- Problems with one solution
+3- Problems with more than one solution
+
+Genetic Algorithms, like AI Algorithms, can be used in the first two, as it tries to find the best solution possible ( which may not be the optimal or may not even exist ).
+
+Genetic Algorithms usally works perfect when dealing with a problem that has a solution space, i.e. a list of possible solutions that the answer could either be one of them or generated from a mixture of them.
+
+Genetic Algorithms works when there is no chace of local minimum, i.e. the search for the best answer gets stuck at a point thinking that this is the best point, of course all answers are limited by constrains.
+
+Genetic Algorithms is based on the genetics and how creatures try to adapt with the enviroment not to be extend and also to have a better generation each time.
+
+Genetic Algorithms is based on a genetics concept called survival of the fittest where each generation is obtained from previous generation with the max number of characterstics that increases its chance to survive.
+
+Genetic Algorithms in computer science tries to  apply the same concepts by trying to choose the best possible candidates for survival, i.e. is close to the real solution and uses them to get even closer and even better solution until the best possible solution is obtained.
+
+The way we choose the next generation or update any element in the solution space varies from one problem to another and needs problem solving skills.
+
+to have a closer look: usually in genetics, each element has dna, ech dna consists of genes, each gene has some information, when natural selection happens, a new mix of each elment dna is created with new dna i.e. new element that has a better chance of survival.
+
+
+
+
+Gentic Algorithm Basic Steps:
+
+1. Initialize Solution Space  ( store or access the solutions among the best solution exists ).
+
+2. Calculate Fitness Function ( i.e. how each solutin is close to the real solution ).
+
+3. Reproduce:
+ 
+ a- from the solution space , mix them  someway to generate new children ).
+ b- generate the children making a new ( better ) solution space, which is called a generation.
+ c- mutatation : mutate ( adjust ) children DNA ( content ) to optimize the new generation based on given probability ranging from 0 to 1 where 0 is leaving the chidren as the same and 1 is complete randomness.
+ d- declare the new modified generation of children as the new population.
+  
+ 4. Replace the old population with the new population, then go to step 2.
+ 
+ 
+ Things to bare in mind:
+ 
+ a- Not all solution space should be replaced, some may actually be a good fit for the next gen.
+ 
+ b- selection ( for next gen ) is based on the fittness of each element in the solution space, the higher fittness the higher the change of picking.
+ 
+ c- each generation may or may not be of the same length as the previous gen.
+ 
+ d- a specific element may survive multiple generation as it produces children for each time we generate a new children.
+ 
+ e- a child of the next gen may have the same charactersitcs of last generation child, or a combination of two children or more.
+ 
+ 
+ 
+ 
+ // Representation of the population elements content
+ 
+ Summary :
+    ---> Population --> Elements --> DNA
+                   : in population: solution space is initialized, initial fitness is calculated by calling Elements class calculate fitness function.
+                   
+                   : in population: selection process ( of new elements ) is performed.
+    
+    ---> Elements : container for the elments , each element has gene,
+                    calculates the fittness of each elment.
+                    performs any general function on the elments ( possibly some elements ).
+                    Elements could be : Rockets, Cars, Balls, Strings... etc.
+                    
+    ---> DNA Consists of Genes, in DNA : Crossover and Muation is Done.
+    
+    
+    ---> Main: Combines all the classes and simulates them by doing the following:
+    
+    a- create an instance of population
+    b- calls population.run()       --> initiate solution space
+    c- calls population.evaluate()  --> cacluate fitness
+    d- calls population.selection() --> performs crossover then mutation
+    e- checking if we reached to our solution if yes then end else: keep calling b,c until a certain condition is met, i.e. a best ( maybe the optimal solution is found ).
+    
+    
+ Side Notes:
+ 
+    a- Selction is based on elements after changing each element DNA by crossover and mutation.
+    b- Selection returns new generation.
+    c- After selection we check if we reached our solution or not, if not we go to step two to calculate fitness of the new genereation to obtainer a newer better one.
+    
+    d- Evaluation is performed on elements to calculate fittness of each element.
+    
+    
+     
+            
+ 
+ 
+ 
+
+ 
+ 
+ 
+
