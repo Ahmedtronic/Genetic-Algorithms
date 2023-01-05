@@ -55,7 +55,9 @@ Gentic Algorithm Basic Steps:
  
  e- a child of the next gen may have the same charactersitcs of last generation child, or a combination of two children or more.
  
+ f- crossover might not be needed at someproblems, only mutating elements of previous generation
  
+ g- fittness function can be created different ways, if there is slight difference between fitness of element and another, making the function exponential could help, also normalizing the fitness of each element is a nice trick for easy calculations.
  
  
  // Representation of the population elements content
@@ -91,14 +93,3 @@ Gentic Algorithm Basic Steps:
     
     d- Evaluation is performed on elements to calculate fittness of each element.
     
-    
-     
-            
- 
- 
- 
-
- 
- 
- 
-
